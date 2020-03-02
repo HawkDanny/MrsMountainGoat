@@ -6,7 +6,6 @@ public class GameManager : MonoBehaviour
 {
     [HideInInspector]
     public string input;
-    private int prevInput;
 
     [Header("Goat")]
     public Rigidbody2D[] legs;
@@ -18,27 +17,16 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         input = "";
-        prevInput = 0;
     }
 
     void Update()
     {
-        int inputInt;
-        int.TryParse(input, out inputInt);
-
-
-
-        if (inputInt == 1 && prevInput == 0)
+        print(input);
+        if (input == "1")
         {
             print("clack!");
+            Step();
         }
-
-
-        prevInput = inputInt;
-
-
-
-
 
 
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class camerapan : MonoBehaviour
 {
-    private float speed = 1;
+    private float speed = 0.5f;
     public GameObject goat;
     public GameObject gameover;
 
@@ -37,22 +37,22 @@ public class camerapan : MonoBehaviour
         //}
 
         //camera moves automatically
-        Debug.Log(speed);
+        //Debug.Log(speed);
         if (goat.transform.position.y < check1)
         {
             //speed = check0speed;
             speed += 0.0001f;
-            Debug.Log("startspeed");
+            //Debug.Log("startspeed");
         }
         else if((goat.transform.position.y > check1)||(goat.transform.position.y < check2))
         {
             speed -= 0.0001f;
-            Debug.Log("secondspeed");
+            //Debug.Log("secondspeed");
         }
         else if ((goat.transform.position.y > check3))
         {
             speed += 0.001f;
-            Debug.Log("thirdspeed");
+            //Debug.Log("thirdspeed");
         }
 
 
