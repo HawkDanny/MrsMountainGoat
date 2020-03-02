@@ -4,17 +4,29 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    
+    [HideInInspector]
+    public string input;
+    private int prevInput;
 
-    // Start is called before the first frame update
     void Start()
     {
-        
+        input = "";
+        prevInput = 0;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        int inputInt;
+        int.TryParse(input, out inputInt);
+
+
+
+        if (inputInt == 1 && prevInput == 0)
+        {
+            print("clack!");
+        }
+
+
+        prevInput = inputInt;
     }
 }

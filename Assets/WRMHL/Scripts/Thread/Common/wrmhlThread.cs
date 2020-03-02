@@ -61,9 +61,9 @@ public abstract class wrmhlThread { // wrmhlThread is the common Thread for rece
 
 	public bool threadIsLooping () { // This method is used to return to the thread looping's var value.
  		lock (this) // avoid thread issues.
- 	{
- 		return looping;
- 	}
+		{
+			return looping;
+		}
 	}
 
 	public string readQueueThread(){ // return the data stocked in the Queue. Independent from the protocol.
